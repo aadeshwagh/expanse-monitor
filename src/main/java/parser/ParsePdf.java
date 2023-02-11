@@ -14,7 +14,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class ParsePdf {
-    public Set<Transaction> parseAxisBankStatement(String statementPath,String password){
+    public List<Transaction> parseAxisBankStatement(String statementPath,String password){
         try {
             // Load the password-protected PDF document
             PDDocument document = PDDocument.load(new File(statementPath), password);
@@ -24,7 +24,7 @@ public class ParsePdf {
             String pattern = "^(0[1-9]|[12][0-9]|3[01])-(0[1-9]|1[012])-[0-9]{4}$";
 
             Pattern p = Pattern.compile(pattern);
-            Set<Transaction> transactions = new HashSet<>();
+            List<Transaction> transactions = new ArrayList<>();
 
             while (pi.hasNext()) {
                 // iterate over the pages of the document
@@ -103,7 +103,7 @@ public class ParsePdf {
 
     }
 
-    public Set<Transaction> parseAxisBankStatement(String statementPath){
+    public List<Transaction> parseAxisBankStatement(String statementPath){
         try {
             // Load the password-protected PDF document
             PDDocument document = PDDocument.load(new File(statementPath));
@@ -113,7 +113,7 @@ public class ParsePdf {
             String pattern = "^(0[1-9]|[12][0-9]|3[01])-(0[1-9]|1[012])-[0-9]{4}$";
 
             Pattern p = Pattern.compile(pattern);
-            Set<Transaction> transactions = new HashSet<>();
+            List<Transaction> transactions = new ArrayList<>();
 
             while (pi.hasNext()) {
                 // iterate over the pages of the document

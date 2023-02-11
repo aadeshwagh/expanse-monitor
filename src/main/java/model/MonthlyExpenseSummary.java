@@ -9,7 +9,8 @@ import java.util.List;
 @Getter
 @Setter
 @ToString
-public class Result {
+public class MonthlyExpenseSummary {
+    private String monthYear;
     private List<Transaction> merchantPayments;
     private List<Transaction> personPayments;
     private List<Transaction> cashWithdrawal;

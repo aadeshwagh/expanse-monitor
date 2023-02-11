@@ -1,23 +1,24 @@
 import model.RegularPayee;
-import model.Result;
+import model.MonthlyExpenseSummary;
 import model.Transaction;
 import parser.ParsePdf;
 
+import java.time.Month;
 import java.util.*;
 import java.util.stream.Collectors;
 
 
 
 public class Expense {
-    private final Result result;
-    private final Set<Transaction> transactions;
+    private final MonthlyExpenseSummary result;
+    private final List<Transaction> transactions;
 
     //people whose created amount should be ignore while calculating total expanse
     private final List<String> personsOfInterest;
     Expense(String statementPath, String password , List<String> personsOfInterest, Double expectedExpense){
         ParsePdf pp = new ParsePdf();
         transactions = pp.parseAxisBankStatement(statementPath,password);
-        result =new Result();
+        result =new MonthlyExpenseSummary();
         result.setExceptedExpanse(expectedExpense);
         this.personsOfInterest = personsOfInterest;
 
@@ -25,12 +26,12 @@ public class Expense {
     Expense(String statementPath, List<String> personsOfInterest, Double expectedExpense){
         ParsePdf pp = new ParsePdf();
         transactions = pp.parseAxisBankStatement(statementPath);
-        result =new Result();
+        result =new MonthlyExpenseSummary();
         result.setExceptedExpanse(expectedExpense);
         this.personsOfInterest = personsOfInterest;
     }
 
-    public Result getMonthlyExpenseAnalysis(){
+    public MonthlyExpenseSummary getMonthlyExpenseAnalysis(){
         categoriesPayments();
         calculateTotalAmounts();
         calculateTotals();
@@ -46,6 +47,12 @@ public class Expense {
         List<Transaction> person = new ArrayList<>();
         List<Transaction> cash = new ArrayList<>();
         List<Transaction> other = new ArrayList<>();
+
+        if(!transactions.isEmpty()){
+            String [] date = transactions.get(0).getDate().split("-");
+           String month = Month.of(Integer.parseInt(date[1])).name();
+            result.setMonthYear(month+"-"+date[2]);
+        }
 
         transactions.forEach(transaction -> {
             if(transaction.getProtocol().toLowerCase().contains("cash"))
