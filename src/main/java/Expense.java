@@ -3,10 +3,9 @@ import model.Result;
 import model.Transaction;
 import parser.ParsePdf;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
+import java.util.stream.Collectors;
+
 
 
 public class Expense {
@@ -35,6 +34,8 @@ public class Expense {
         categoriesPayments();
         calculateTotalAmounts();
         calculateTotals();
+        calculateRegulars();
+        calculateHighestTransaction();
 
 
         return result;
@@ -97,7 +98,35 @@ public class Expense {
         List<RegularPayee> regularPayees = new ArrayList<>();
         HashMap<String,Integer> transactionFrequency = new HashMap<>();
 
-       // transactions.forEach();
+       transactions.forEach(transaction -> {
+           transactionFrequency.put(transaction.getName(), transactionFrequency.containsKey(transaction.getName()) ? transactionFrequency.get(transaction.getName()) + 1 : 1);
+       });
+       transactionFrequency.keySet().forEach(name-> {
+           if (transactionFrequency.get(name) >= 3){
+               Set<Transaction> payeeTransactions = transactions.stream().filter(transaction -> transaction.getName().equals(name)).collect(Collectors.toSet());
+               String type = payeeTransactions.stream().findAny().get().getType();
+               long totalPayments = payeeTransactions.stream().filter(transaction -> transaction.getDebit()!=null && transaction.getCredit() ==null ).count();
+               double totalPayed = payeeTransactions.stream().filter(transaction -> transaction.getDebit()!=null).mapToDouble(Transaction::getDebit).sum();
+               double totalReceived = payeeTransactions.stream().filter(transaction -> transaction.getCredit()!=null).mapToDouble(Transaction::getCredit).sum();
+               double averagePayed = totalPayed/totalPayments;
+
+               RegularPayee regularPayee = new RegularPayee();
+               regularPayee.setType(type);
+               regularPayee.setAvgPayment(averagePayed);
+               regularPayee.setName(name);
+               regularPayee.setTotalDebited(totalPayed);
+               regularPayee.setTotalReceived(totalReceived);
+
+               regularPayees.add(regularPayee);
+           }
+
+       });
+      result.setRegulars(regularPayees);
+    }
+
+    private void calculateHighestTransaction(){
+        Optional<Transaction> highest = transactions.stream().filter(transaction -> transaction.getDebit()!=null).max(Comparator.comparing(Transaction::getDebit));
+        highest.ifPresent(result::setHighestTransaction);
     }
 
 
