@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40cfd99d-2064-4987-8ec3-60a20609b8fb" name="Changes" comment="added functionality to calculate regular payees and highest transaction">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Notion.java" afterDir="false" />
+    <list default="true" id="40cfd99d-2064-4987-8ec3-60a20609b8fb" name="Changes" comment="adding month year to monthly expense summary">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Expense.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Expense.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/MonthlyExpenseSummary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/parser/ParsePdf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/parser/ParsePdf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Notion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Notion.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +51,11 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="model" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Application" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -90,7 +95,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676108894716</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="adding month year to monthly expense summary">
+      <created>1676109876328</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1676109876328</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -108,6 +120,7 @@
     <MESSAGE value="created axis bank statement parser" />
     <MESSAGE value="added methods to calculate result" />
     <MESSAGE value="added functionality to calculate regular payees and highest transaction" />
-    <option name="LAST_COMMIT_MESSAGE" value="added functionality to calculate regular payees and highest transaction" />
+    <MESSAGE value="adding month year to monthly expense summary" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding month year to monthly expense summary" />
   </component>
 </project>

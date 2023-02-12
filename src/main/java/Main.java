@@ -1,7 +1,4 @@
-import model.Transaction;
 import parser.ParsePdf;
-
-import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
@@ -9,7 +6,8 @@ public class Main {
 
         ParsePdf pp = new ParsePdf();
 
-        Expense e = new Expense("src/main/resources/December_axis.pdf","AADE0312",List.of("shirish","aadesh"),10000.00);
-
+        Expense e = new Expense("axisbankstatement file path","password",List.of("person of intersts"),10000.00);
+        Notion notion = new Notion();
+        notion.createSummaryInNotion(e.getMonthlyExpenseAnalysis());
        }
 }

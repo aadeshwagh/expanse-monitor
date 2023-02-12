@@ -100,6 +100,7 @@ public class Expense {
         result.setTotalSavings(result.getExceptedExpanse() - totalExpanse);
 
 
+
     }
     private void calculateRegulars(){
         List<RegularPayee> regularPayees = new ArrayList<>();
