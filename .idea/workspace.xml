@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40cfd99d-2064-4987-8ec3-60a20609b8fb" name="Changes" comment="made transaction a set">
+    <list default="true" id="40cfd99d-2064-4987-8ec3-60a20609b8fb" name="Changes" comment="improved equals method in transaction">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Expense.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Expense.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Notion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Notion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Transaction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/MonthlyExpenseSummary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/MonthlyExpenseSummary.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/parser/ParsePdf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/parser/ParsePdf.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -117,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677575620079</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="improved equals method in transaction">
+      <created>1677594555375</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1677594555375</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -138,6 +145,7 @@
     <MESSAGE value="adding month year to monthly expense summary" />
     <MESSAGE value="Connected with notion api v.1.0 is complete" />
     <MESSAGE value="made transaction a set" />
-    <option name="LAST_COMMIT_MESSAGE" value="made transaction a set" />
+    <MESSAGE value="improved equals method in transaction" />
+    <option name="LAST_COMMIT_MESSAGE" value="improved equals method in transaction" />
   </component>
 </project>

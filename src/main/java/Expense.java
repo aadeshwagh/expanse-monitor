@@ -94,6 +94,8 @@ public class Expense {
 
         double actualPersonCredit = personCredit - pOfInterestCredit;
 
+        result.setTotalActualPersonDebitAmount(personDebit - actualPersonCredit);
+
         totalExpanse = merchantDebit + personDebit + cashDebit + otherDebit - actualPersonCredit ;
 
         result.setTotalExpense(totalExpanse);

@@ -19,6 +19,7 @@ public class MonthlyExpenseSummary {
     private double totalMerchantAmount;
     private double totalPersonDebitAmount;
     private double totalPersonCreditAmount;
+    private double totalActualPersonDebitAmount;
     private double totalCreditAmountByPersonsOfInterest;
     private double totalCashWithdrawal;
     private double totalExpense;

@@ -52,6 +52,11 @@ public class ParsePdf {
                                 if(count==1){
                                     if(text.isEmpty())
                                         continue;
+                                    if(text.contains("4691XXXXXXXX9436")){
+                                        transaction.setTnxId("anualcharges");
+                                        count++;
+                                        continue;
+                                    }
                                     String[] message = text.split("/");
                                     transaction.setProtocol(message[0]);
                                     transaction.setType(message[1]);
@@ -83,7 +88,7 @@ public class ParsePdf {
 
                                 count++;
                             }
-                        if(transaction != null)
+                        if(transaction != null && !transaction.getTnxId().equals("anualcharges"))
                             transactions.add(transaction);
 
                         }
@@ -141,6 +146,11 @@ public class ParsePdf {
                             if(count==1){
                                 if(text.isEmpty())
                                     continue;
+                                if(text.contains("4691XXXXXXXX9436")){
+                                    transaction.setTnxId("anualcharges");
+                                    count++;
+                                    continue;
+                                }
                                 String[] message = text.split("/");
                                 transaction.setProtocol(message[0]);
                                 transaction.setType(message[1]);
@@ -172,7 +182,7 @@ public class ParsePdf {
 
                             count++;
                         }
-                        if(transaction != null)
+                        if(transaction != null && !transaction.getTnxId().equals("anualcharges"))
                             transactions.add(transaction);
 
                     }
