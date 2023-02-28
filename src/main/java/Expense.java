@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
 
 public class Expense {
     private final MonthlyExpenseSummary result;
-    private final List<Transaction> transactions;
+    private final Set<Transaction> transactions;
 
     //people whose created amount should be ignore while calculating total expanse
     private final List<String> personsOfInterest;
@@ -49,7 +49,7 @@ public class Expense {
         List<Transaction> other = new ArrayList<>();
 
         if(!transactions.isEmpty()){
-            String [] date = transactions.get(0).getDate().split("-");
+            String [] date = transactions.stream().toList().get(0).getDate().split("-");
            String month = Month.of(Integer.parseInt(date[1])).name();
             result.setMonthYear(month+"-"+date[2]);
         }

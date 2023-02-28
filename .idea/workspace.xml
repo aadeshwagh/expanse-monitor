@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40cfd99d-2064-4987-8ec3-60a20609b8fb" name="Changes" comment="adding month year to monthly expense summary">
+    <list default="true" id="40cfd99d-2064-4987-8ec3-60a20609b8fb" name="Changes" comment="Connected with notion api v.1.0 is complete">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Expense.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Expense.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Notion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Notion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Transaction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/parser/ParsePdf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/parser/ParsePdf.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +102,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676109876328</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Connected with notion api v.1.0 is complete">
+      <created>1676208645182</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1676208645183</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -121,6 +128,7 @@
     <MESSAGE value="added methods to calculate result" />
     <MESSAGE value="added functionality to calculate regular payees and highest transaction" />
     <MESSAGE value="adding month year to monthly expense summary" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding month year to monthly expense summary" />
+    <MESSAGE value="Connected with notion api v.1.0 is complete" />
+    <option name="LAST_COMMIT_MESSAGE" value="Connected with notion api v.1.0 is complete" />
   </component>
 </project>

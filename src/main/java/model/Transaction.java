@@ -4,6 +4,8 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
+import java.util.Objects;
+
 @Getter
 @Setter
 @ToString
@@ -17,4 +19,16 @@ public class Transaction {
     private Double credit;
     private Double balance;
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Transaction that = (Transaction) o;
+        return tnxId.equals(that.tnxId);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(tnxId);
+    }
 }
