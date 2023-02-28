@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40cfd99d-2064-4987-8ec3-60a20609b8fb" name="Changes" comment="Connected with notion api v.1.0 is complete">
+    <list default="true" id="40cfd99d-2064-4987-8ec3-60a20609b8fb" name="Changes" comment="made transaction a set">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Expense.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Expense.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Notion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Notion.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Transaction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/parser/ParsePdf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/parser/ParsePdf.java" afterDir="false" />
     </list>
@@ -109,7 +110,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676208645183</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="made transaction a set">
+      <created>1677575620078</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1677575620079</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -129,6 +137,7 @@
     <MESSAGE value="added functionality to calculate regular payees and highest transaction" />
     <MESSAGE value="adding month year to monthly expense summary" />
     <MESSAGE value="Connected with notion api v.1.0 is complete" />
-    <option name="LAST_COMMIT_MESSAGE" value="Connected with notion api v.1.0 is complete" />
+    <MESSAGE value="made transaction a set" />
+    <option name="LAST_COMMIT_MESSAGE" value="made transaction a set" />
   </component>
 </project>

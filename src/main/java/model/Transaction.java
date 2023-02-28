@@ -24,11 +24,11 @@ public class Transaction {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Transaction that = (Transaction) o;
-        return tnxId.equals(that.tnxId);
+        return date.equals(that.date) && Objects.equals(protocol, that.protocol) && Objects.equals(type, that.type) && Objects.equals(name, that.name) && tnxId.equals(that.tnxId) && Objects.equals(debit, that.debit) && Objects.equals(credit, that.credit) && Objects.equals(balance, that.balance);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(tnxId);
+        return Objects.hash(date, protocol, type, name, tnxId, debit, credit, balance);
     }
 }
